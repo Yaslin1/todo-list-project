@@ -11,7 +11,7 @@ export default function AddTodo ({ setTodoItems }) {
             uid: user.uid,
             title: e.target.todo.value,
         }
-        fetch(`https://chekov-api-c11.web.app/tasks/${user.uid}`, {
+        fetch(`https://us-central1-chekov-api-yc.cloudfunctions.net/api/tasks/${user.uid}`, {
             method: 'POST',
             headers: {
                 'Content-type': 'application/json',

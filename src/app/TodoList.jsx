@@ -7,7 +7,7 @@ export default function TodoList({ todoItems, setTodoItems}) {
 
     useEffect(() => {
         if (user) {
-            fetch(`https://chekov-api-c11.web.app/tasks/${user.uid}`) //useyour project
+            fetch(`https://us-central1-chekov-api-yc.cloudfunctions.net/api/tasks/${user.uid}`) //useyour project
                 .then(res => res.json())
                 .then(setTodoItems)
                 .catch(alert);
